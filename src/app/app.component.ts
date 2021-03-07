@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
 
   }
 
-  ngOnInit(){
+  reloadUser(){
     this.userService.getUser().subscribe(
       (user : any)=>{
         console.log(user);
@@ -26,5 +26,9 @@ export class AppComponent implements OnInit {
         this.toastr.error(err.status,"OOPS!! Something Went Wrong");
       }
     )
+  }
+
+  ngOnInit(){
+
   }
 }
